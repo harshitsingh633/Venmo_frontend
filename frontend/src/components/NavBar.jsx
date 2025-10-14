@@ -10,6 +10,7 @@ export function NavBar() {
         <button onClick={() => {
             navigate('/signup')
         }} className="font-semibold rounded-4xl border m-5 p-2">Login</button>
+        
       </div>
     </div>
   );
