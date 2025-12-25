@@ -1,8 +1,21 @@
-export function InputBox({label , placeholder,onChange}){
-    return <div>
-        <div className="text-sm font-medium text-left py-2">
-            {label}
+export function InputBox({label,placeholder,onChange,type,onClick,value,onKeyDown}){
+    return  <div>
+      {label && (
+        <div>
+          {label && (
+            <div className="text-sm font-medium text-left py-2">{label}</div>
+          )}
         </div>
-        <input onChange={onChange} placeholder={placeholder} className="w-full px-2 py-1 border rounded border-slate-200" />
+      )}
+
+      <input
+        type={type}
+        value={value}
+        onChange={onChange}
+        onClick={onClick}
+        onKeyDown={onKeyDown}
+        placeholder={placeholder}
+        className="w-full px-2 py-1 border rounded border-slate-400"
+      />
     </div>
 }

@@ -8,21 +8,21 @@ export const Appbar = () => {
             Venmo Payment App
         </div>
         <div className="flex">
-            <div className="flex flex-col justify-center mr-3 text-xl ">
+            <div className="flex flex-col justify-center mr-3 ">
                 <button
                 onClick={() => {
                     navigate("/balance")
                 }}
-                 className="text-blue-600 hover:text-blue-800 cursor-pointer items-center rounded-4xl text-md border-black border p-2">Balance</button>
+                 className="text-gray-800 hover:text-gray-500 cursor-pointer items-center rounded-4xl text-lg border-blue-600 border p-1">Balance</button>
                         </div>
                         
             
-                <div className="flex flex-col justify-center mr-3 text-xl">
+                <div className="flex flex-col justify-center mr-3 ">
                     <button onClick={() => {
                         localStorage.removeItem("token");
                         navigate("/");
                     }}
-                    className="text-blue-600 hover:text-blue-800 cursor-pointer rounded-4xl border-black border p-2"
+                    className="text-gray-800 hover:text-gray-500 cursor-pointer rounded-4xl border-blue-600 border text-lg p-1"
                     >Logout</button>
                 </div>
             </div>

@@ -1,6 +1,6 @@
 import { useLocation, useNavigate, useSearchParams } from "react-router-dom";
 import axios from "axios";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Heading } from "../components/Heading";
 
 export const SendMoney = () => {
@@ -21,7 +21,6 @@ export const SendMoney = () => {
           },
         }
       );
-
       if (response.data.success) {
         navigate("/payment");
       } else {
@@ -79,9 +78,18 @@ export const SendMoney = () => {
   );
 };
 
-export function PaymentSuccessfull() {
+export function PaymentSuccessful() {
   const location = useLocation();
+  const navigate = useNavigate();
   const { to, amount, message } = location.state || {};
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      navigate("/dashboard")
+    },5000);
+
+    return () => clearTimeout(timer);
+  },[navigate]);
 
   return (
     <div className="flex h-screen bg-gray-100 justify-center items-center">
@@ -103,14 +111,29 @@ export function PaymentSuccessfull() {
 
 export function PaymentFailed() {
   const location = useLocation();
+  const navigate = useNavigate();
   const error = location.state?.error || "Payment failed due to an unknown error.";
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      navigate("/dashboard")
+    },5000);
+
+    return () => clearTimeout(timer);
+  },[navigate]);
 
   return (
     <div className="flex h-screen bg-gray-100 justify-center items-center">
       <div className="bg-white p-8 rounded-lg shadow-md text-center">
-        <h2 className="text-3xl font-bold text-red-600 mb-4">Payment Failed</h2>
+        <h2 className="text-3xl font-bold text-red-600 mb-4">
+          Payment Failed
+        </h2>
         <p className="text-gray-700">{error}</p>
+        <p className="mt-4 text-sm text-gray-500">
+          Redirecting to dashboard...
+        </p>
       </div>
     </div>
   );
 }
+

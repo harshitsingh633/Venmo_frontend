@@ -12,26 +12,26 @@ export function Signin() {
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
   return (
-    <div className="bg-slate-300 h-screen flex justify-center">
+    <div className="bg-linear-to-b to-pink-300 from-pink-100 h-screen flex justify-center">
       <div className="flex flex-col justify-center">
         <div className="rounded-lg bg-white w-80 text-center p-2 h-max px-4">
           <Heading label={"Sign in"} />
           <SubHeading
             label={"Enter your credientials to access your account"}
           />
-          <InputBox
+          <InputBox 
             onChange={(e) => {
               setUsername(e.target.value);
             }}
-            placeholder="harshit@gmail.com"
+            placeholder="abcde@gmail.com"
             label={"Email"}
           />
-          <InputBox
+          <InputBox 
             onChange={(e) => {
               setPassword(e.target.value);
             }}
             placeholder="123456"
-            label={"Password"}
+            label={"Password"} type={"password"}
           />
           <div className="pt-4">
             <Button
