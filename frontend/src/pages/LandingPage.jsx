@@ -9,7 +9,7 @@ import SurveySVG from "../assets/Survey.svg"
 export function LandingPage() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-white to-[#F9DFDF]">
-      <NavBar />
+        <NavBar />      
       <section className="flex items-center justify-center px-6 py-24">
         <div className="max-w-4xl text-center">
           <h1 className="text-4xl md:text-6xl font-bold text-slate-800 leading-tight tracking-tighter select-none">
@@ -39,7 +39,6 @@ export function LandingPage() {
       <section className="px-6 md:px-20 py-16 select-none">
         <FAQ />
       </section>
-
       <Footer />
     </div>
   );
