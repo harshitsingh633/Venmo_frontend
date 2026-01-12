@@ -13,7 +13,7 @@
     "@tailwindcss/vite": "^4.1.14",
     "axios": "^1.13.2",
     "esbuild": "^0.25.10",
-    "framer-motion": "^12.23.26",
+    "motion": "^12.25.0",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
     "react-router-dom": "^7.9.3",

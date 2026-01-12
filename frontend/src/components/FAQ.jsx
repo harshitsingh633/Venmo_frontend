@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Plus } from "../icons/Plus";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion ,AnimatePresence } from "motion/react";
 
 const generalFAQs = [
   {
@@ -29,8 +29,8 @@ export function FAQ() {
   const [openIndex, setOpenIndex] = useState(null);
 
   return (
-    <div className="ml-44 max-w-3xl">
-      <h1 className="text-4xl text-[#1D293D] font-bold mb-8">
+    <div className="lg:ml-60 max-w-3xl">
+      <h1 className="text-4xl text-[#1D293D] flex justify-center font-bold mb-8">
         Frequently Asked Questions
       </h1>
 
@@ -39,7 +39,7 @@ export function FAQ() {
 
         return (
           <div key={index} className="border-b py-6">
-            {/* Question Row */}
+            
             <div
               onClick={() => setOpenIndex(isOpen ? null : index)}
               className="flex items-center justify-between cursor-pointer"
@@ -56,7 +56,7 @@ export function FAQ() {
               </motion.div>
             </div>
 
-            {/* Answer */}
+            
             <AnimatePresence initial={false}>
               {isOpen && (
                 <motion.div

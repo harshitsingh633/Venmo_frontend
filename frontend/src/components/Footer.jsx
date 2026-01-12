@@ -5,20 +5,20 @@ export function Footer() {
         <div className="flex space-x-6">
           <a
             href="https://github.com/harshitsingh633/Venmo_frontend"
-            className="hover:text-pink-500 transition-colors"
+            className="hover:text-purple-900 transition-colors"
             target="_blank"
             rel="noopener noreferrer"
           >
             About
           </a>
 
-          <a href="#" className="hover:text-pink-500 transition-colors">
+          <a href="#" className="hover:text-purple-900 transition-colors">
             Help
           </a>
-          <a href="#" className="hover:text-pink-500 transition-colors">
+          <a href="#" className="hover:text-purple-900 transition-colors">
             Privacy
           </a>
-          <a href="#" className="hover:text-pink-500 transition-colors">
+          <a href="#" className="hover:text-purple-900 transition-colors">
             Terms
           </a>
         </div>

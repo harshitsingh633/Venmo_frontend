@@ -7,9 +7,9 @@ import { PaymentFailed, PaymentSuccessful, SendMoney } from './pages/SendMoney'
 import { LandingPage } from './pages/LandingPage'
 import { ProtectedRoute } from './components/ProtectedRoute'
 import { Balance } from './components/Balance'
-import { GoogleSuccess } from './pages/GoogleSuccess'
 import { Card } from './components/Card'
-function App() {  
+
+function App() {
 
   return (
     <>
@@ -22,8 +22,6 @@ function App() {
         <Route path='/signin' element={<Signin/> }/>
         <Route path='/balance' element={<ProtectedRoute><Balance /></ProtectedRoute>} />
         <Route path='/send' element={<ProtectedRoute><SendMoney/></ProtectedRoute> }/>
-        <Route path="/google/success" element={<GoogleSuccess />} />
-        <Route path="/google/error" element={<div>Google OAuth failed</div>} />
         <Route path='/payment' element={<PaymentSuccessful />}/>
         <Route path='/paymentfailed' element={<PaymentFailed />}/>
       </Routes>
