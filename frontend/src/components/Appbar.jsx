@@ -13,16 +13,15 @@ export const Appbar = () => {
                 onClick={() => {
                     navigate("/balance")
                 }}
-                 className="text-gray-800 hover:text-gray-500 cursor-pointer items-center rounded-4xl text-lg border-blue-600 border p-1">Balance</button>
+                 className="text-red-800 hover:text-gray-500 cursor-pointer items-center rounded-4xl text-lg font-semibold border-gray-600 border p-1">Balance</button>
                         </div>
                         
-            
                 <div className="flex flex-col justify-center mr-3 ">
                     <button onClick={() => {
                         localStorage.removeItem("token");
                         navigate("/");
                     }}
-                    className="text-gray-800 hover:text-gray-500 cursor-pointer rounded-4xl border-blue-600 border text-lg p-1"
+                    className="text-red-800 hover:text-gray-500 cursor-pointer rounded-4xl border-gray-600 border text-lg font-semibold p-1"
                     >Logout</button>
                 </div>
             </div>
