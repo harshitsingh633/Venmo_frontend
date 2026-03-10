@@ -34,7 +34,7 @@ export function Signup (){
               }} placeholder="123456" type={"password"} label={"Password"} />
               <div className="pt-4">
                     <Button onClick={async () => {
-                       const response = await axios.post("http://localhost:3000/api/v1/user/signup",{
+                       const response = await axios.post("https://venmo-backend-1.onrender.com/api/v1/user/signup",{
                             username,
                             firstName,
                             lastName,

@@ -14,7 +14,7 @@ export const Users = () => {
     const currentUserId = decoded.userId; // or whatever key you used
 
     axios
-      .get("http://localhost:3000/api/v1/user/bulk?filter=" + filter, {
+      .get("https://venmo-backend-1.onrender.com/api/v1/user/bulk?filter=" + filter, {
         headers: { Authorization: `Bearer ${token}` },
       })
       .then((response) => {

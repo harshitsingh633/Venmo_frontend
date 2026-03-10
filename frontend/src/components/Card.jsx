@@ -37,8 +37,10 @@ export const Card = ({ onClose }) => {
   async function callAI(message) {
     try {
       const response = await axios.post(
-        "http://localhost:3000/api/v1/user/chatbot",
-        { message }
+        "https://venmo-backend-1.onrender.com/api/v1/user/chatbot",
+        { message },{
+          timeout: 60000
+        }
       );
 
       return {
