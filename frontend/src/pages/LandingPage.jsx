@@ -6,8 +6,10 @@ import PaymentSecure from "../assets/Payment-Information-rafiki.svg";
 import moneySVG from "../assets/money.svg";
 import SurveySVG from "../assets/Survey.svg";
 import { motion } from "motion/react";
+import { useNavigate } from "react-router-dom";
 
 export function LandingPage() {
+  const navigate = useNavigate();
   return (
     <div className="min-h-screen bg-gradient-to-b from-white to-[#F9DFDF]">
         <NavBar />
@@ -37,10 +39,17 @@ export function LandingPage() {
         <img src={SurveySVG} alt="Survey" />
      </div>
      </motion.div>
-
+    
       <section className="px-6 md:px-20 py-16 select-none">
         <FAQ />
       </section>
+      <div className="flex flex-col justify-center items-center">
+      <span className="font-semibold text-3xl items-center justify-center">Ready to get Started?</span>
+      <p className="leading-tight p-5">Sign up now and start sending money with ease!</p>
+      <button className="font-semibold rounded-xl border-2 border-purple-400  p-2 hover:border-b-purple-900" onClick={() => {
+        navigate("/signin")
+      }}>Join Now</button>
+    </div>
       <Footer />
     </div>
   );
