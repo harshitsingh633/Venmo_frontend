@@ -22,7 +22,10 @@ export function LandingPage() {
           <p className="mt-6 text-gray-500 text-lg md:text-xl select-none tracking-tight">
             Pay, get paid. Join the tens of millions of people on Venmo
           </p>
-            <button className="font-semibold rounded-4xl text-white border bg-purple-400 p-2 ">Get Started</button>
+            <button className="font-semibold rounded-4xl text-white border bg-purple-400 p-2 "
+              onClick={() => {
+        navigate("/signin")
+              }}>Get Started</button>
           <button className="font-semibold rounded-4xl border-2 border-purple-400 m-5 p-2 hover:border-b-purple-900">Learn More</button>
 
         </div>
